@@ -1,0 +1,8 @@
+steps:
+# Build all supported versions.
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '--build-arg=NODE_VERSION=6.14.4'
+  - '--tag=gcr.io/$PROJECT_ID/npm:node-6.14.4'
+  - '.'
